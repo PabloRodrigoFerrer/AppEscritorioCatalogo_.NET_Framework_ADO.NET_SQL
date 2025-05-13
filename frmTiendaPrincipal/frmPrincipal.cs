@@ -18,7 +18,7 @@ namespace frmTiendaPrincipal
     public partial class frmPrincipal : Form
     {
         List<Articulo> listaArticulos;
-        //prueba cambio git
+        
         public frmPrincipal()
         {
             InitializeComponent();
