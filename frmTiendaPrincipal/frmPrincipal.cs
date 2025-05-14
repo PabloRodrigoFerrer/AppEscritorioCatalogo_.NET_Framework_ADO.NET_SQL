@@ -208,6 +208,7 @@ namespace frmTiendaPrincipal
             cboCriterio.SelectedIndex = -1;
             cboCriterio.DataSource = null;
             cboCriterio.Items.Clear();
+            txtFiltroAvanzado.Enabled = true;
             if (cboCampo.Text == "Precio")
             {
                 cboCriterio.Items.Add("Mayor igual a");
@@ -226,6 +227,9 @@ namespace frmTiendaPrincipal
                     NegocioCategoria negocioCategoria = new NegocioCategoria();
                     cboCriterio.DataSource = negocioCategoria.listar();
                 }
+
+                txtFiltroAvanzado.Enabled = false;
+               
             }
             else
             {

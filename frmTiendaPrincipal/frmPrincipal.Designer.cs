@@ -55,6 +55,7 @@
             this.txtCuerpoUrlImagen = new System.Windows.Forms.TextBox();
             this.txtCuerpoPrecio = new System.Windows.Forms.TextBox();
             this.txtCuerpoNombre = new System.Windows.Forms.TextBox();
+            this.pbxPrincipal = new System.Windows.Forms.PictureBox();
             this.txtTablaTitulo = new System.Windows.Forms.TextBox();
             this.lblID = new System.Windows.Forms.Label();
             this.cboCampo = new System.Windows.Forms.ComboBox();
@@ -66,7 +67,6 @@
             this.lblCriterio = new System.Windows.Forms.Label();
             this.lblFiltroAvanzado = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.pbxPrincipal = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).BeginInit();
             this.layOutPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxPrincipal)).BeginInit();
@@ -443,6 +443,17 @@
             this.txtCuerpoNombre.Text = "Nombre";
             this.txtCuerpoNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // pbxPrincipal
+            // 
+            this.pbxPrincipal.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.pbxPrincipal.Location = new System.Drawing.Point(4, 24);
+            this.pbxPrincipal.Margin = new System.Windows.Forms.Padding(4);
+            this.pbxPrincipal.Name = "pbxPrincipal";
+            this.pbxPrincipal.Size = new System.Drawing.Size(340, 222);
+            this.pbxPrincipal.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbxPrincipal.TabIndex = 1;
+            this.pbxPrincipal.TabStop = false;
+            // 
             // txtTablaTitulo
             // 
             this.txtTablaTitulo.BackColor = System.Drawing.Color.SkyBlue;
@@ -572,17 +583,6 @@
             this.label1.Size = new System.Drawing.Size(61, 15);
             this.label1.TabIndex = 6;
             this.label1.Text = "Filtrar por:";
-            // 
-            // pbxPrincipal
-            // 
-            this.pbxPrincipal.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.pbxPrincipal.Location = new System.Drawing.Point(4, 24);
-            this.pbxPrincipal.Margin = new System.Windows.Forms.Padding(4);
-            this.pbxPrincipal.Name = "pbxPrincipal";
-            this.pbxPrincipal.Size = new System.Drawing.Size(340, 222);
-            this.pbxPrincipal.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbxPrincipal.TabIndex = 1;
-            this.pbxPrincipal.TabStop = false;
             // 
             // frmPrincipal
             // 
