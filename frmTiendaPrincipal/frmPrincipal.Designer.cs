@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvArticulos = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
             this.ttAyuda = new System.Windows.Forms.ToolTip(this.components);
@@ -74,20 +74,20 @@
             // 
             // dgvArticulos
             // 
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvArticulos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvArticulos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvArticulos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvArticulos.BackgroundColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvArticulos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvArticulos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvArticulos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvArticulos.Location = new System.Drawing.Point(270, 102);
@@ -99,7 +99,7 @@
             this.dgvArticulos.RowTemplate.ReadOnly = true;
             this.dgvArticulos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvArticulos.Size = new System.Drawing.Size(929, 667);
-            this.dgvArticulos.TabIndex = 0;
+            this.dgvArticulos.TabIndex = 10;
             this.dgvArticulos.SelectionChanged += new System.EventHandler(this.dgvArticulos_SelectionChanged);
             // 
             // label3
@@ -124,8 +124,8 @@
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(97, 35);
-            this.btnAgregar.TabIndex = 2;
-            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.TabIndex = 6;
+            this.btnAgregar.Text = "&Agregar";
             this.ttAyuda.SetToolTip(this.btnAgregar, "Agregar elementos a la base de datos.");
             this.btnAgregar.UseVisualStyleBackColor = false;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
@@ -142,8 +142,8 @@
             this.btnModificar.Margin = new System.Windows.Forms.Padding(4);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(97, 35);
-            this.btnModificar.TabIndex = 2;
-            this.btnModificar.Text = "Modificar";
+            this.btnModificar.TabIndex = 7;
+            this.btnModificar.Text = "&Modificar";
             this.ttAyuda.SetToolTip(this.btnModificar, "Modifica el elemento seleccionado.");
             this.btnModificar.UseVisualStyleBackColor = false;
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
@@ -158,8 +158,8 @@
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(4);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(97, 35);
-            this.btnBuscar.TabIndex = 2;
-            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.TabIndex = 4;
+            this.btnBuscar.Text = "&Buscar";
             this.ttAyuda.SetToolTip(this.btnBuscar, "Busca en la DB con condiciones avanzadas, campos obligatorios: \"Campo:\", \"Criteri" +
         "o:\".");
             this.btnBuscar.UseVisualStyleBackColor = false;
@@ -174,7 +174,7 @@
             this.txtFiltroRapido.Margin = new System.Windows.Forms.Padding(4);
             this.txtFiltroRapido.Name = "txtFiltroRapido";
             this.txtFiltroRapido.Size = new System.Drawing.Size(368, 25);
-            this.txtFiltroRapido.TabIndex = 4;
+            this.txtFiltroRapido.TabIndex = 5;
             this.txtFiltroRapido.Text = "Buscar...";
             this.ttAyuda.SetToolTip(this.txtFiltroRapido, "Filtra rápido por cualquier campo");
             this.txtFiltroRapido.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtFiltroRapido_MouseClick);
@@ -187,7 +187,7 @@
             this.txtFiltroAvanzado.Margin = new System.Windows.Forms.Padding(4);
             this.txtFiltroAvanzado.Name = "txtFiltroAvanzado";
             this.txtFiltroAvanzado.Size = new System.Drawing.Size(175, 25);
-            this.txtFiltroAvanzado.TabIndex = 4;
+            this.txtFiltroAvanzado.TabIndex = 2;
             this.ttAyuda.SetToolTip(this.txtFiltroAvanzado, "Filtro opcional");
             // 
             // btnLimpiar
@@ -199,8 +199,8 @@
             this.btnLimpiar.Location = new System.Drawing.Point(37, 253);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(97, 35);
-            this.btnLimpiar.TabIndex = 7;
-            this.btnLimpiar.Text = "Limpiar";
+            this.btnLimpiar.TabIndex = 3;
+            this.btnLimpiar.Text = "&Limpiar";
             this.ttAyuda.SetToolTip(this.btnLimpiar, "Limpia todos los campos de los filtros.");
             this.btnLimpiar.UseVisualStyleBackColor = false;
             this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
@@ -263,7 +263,7 @@
             this.txtTablaEncabezadoNombre.Location = new System.Drawing.Point(3, 268);
             this.txtTablaEncabezadoNombre.Name = "txtTablaEncabezadoNombre";
             this.txtTablaEncabezadoNombre.Size = new System.Drawing.Size(342, 18);
-            this.txtTablaEncabezadoNombre.TabIndex = 0;
+            this.txtTablaEncabezadoNombre.TabIndex = 1;
             this.txtTablaEncabezadoNombre.Text = "Nombre";
             this.txtTablaEncabezadoNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -277,7 +277,7 @@
             this.txtTablaEncabezdoCodigo.Location = new System.Drawing.Point(3, 328);
             this.txtTablaEncabezdoCodigo.Name = "txtTablaEncabezdoCodigo";
             this.txtTablaEncabezdoCodigo.Size = new System.Drawing.Size(342, 18);
-            this.txtTablaEncabezdoCodigo.TabIndex = 0;
+            this.txtTablaEncabezdoCodigo.TabIndex = 3;
             this.txtTablaEncabezdoCodigo.Text = "Código";
             this.txtTablaEncabezdoCodigo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -291,7 +291,7 @@
             this.txtTablaEncabezdoDescripcion.Location = new System.Drawing.Point(3, 388);
             this.txtTablaEncabezdoDescripcion.Name = "txtTablaEncabezdoDescripcion";
             this.txtTablaEncabezdoDescripcion.Size = new System.Drawing.Size(342, 18);
-            this.txtTablaEncabezdoDescripcion.TabIndex = 0;
+            this.txtTablaEncabezdoDescripcion.TabIndex = 5;
             this.txtTablaEncabezdoDescripcion.Text = "Descripción";
             this.txtTablaEncabezdoDescripcion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -305,7 +305,7 @@
             this.txtTablaEncabezdoMarca.Location = new System.Drawing.Point(3, 448);
             this.txtTablaEncabezdoMarca.Name = "txtTablaEncabezdoMarca";
             this.txtTablaEncabezdoMarca.Size = new System.Drawing.Size(342, 18);
-            this.txtTablaEncabezdoMarca.TabIndex = 0;
+            this.txtTablaEncabezdoMarca.TabIndex = 7;
             this.txtTablaEncabezdoMarca.Text = "Marca";
             this.txtTablaEncabezdoMarca.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -319,7 +319,7 @@
             this.txtTablaEncabezdoCategoria.Location = new System.Drawing.Point(3, 508);
             this.txtTablaEncabezdoCategoria.Name = "txtTablaEncabezdoCategoria";
             this.txtTablaEncabezdoCategoria.Size = new System.Drawing.Size(342, 18);
-            this.txtTablaEncabezdoCategoria.TabIndex = 0;
+            this.txtTablaEncabezdoCategoria.TabIndex = 9;
             this.txtTablaEncabezdoCategoria.Text = "Categoria";
             this.txtTablaEncabezdoCategoria.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -334,7 +334,7 @@
             this.txtCuerpoCodigo.Multiline = true;
             this.txtCuerpoCodigo.Name = "txtCuerpoCodigo";
             this.txtCuerpoCodigo.Size = new System.Drawing.Size(342, 34);
-            this.txtCuerpoCodigo.TabIndex = 0;
+            this.txtCuerpoCodigo.TabIndex = 4;
             this.txtCuerpoCodigo.Text = "Nombre";
             this.txtCuerpoCodigo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -348,7 +348,7 @@
             this.txtCuerpoDescripcion.Multiline = true;
             this.txtCuerpoDescripcion.Name = "txtCuerpoDescripcion";
             this.txtCuerpoDescripcion.Size = new System.Drawing.Size(342, 34);
-            this.txtCuerpoDescripcion.TabIndex = 0;
+            this.txtCuerpoDescripcion.TabIndex = 6;
             this.txtCuerpoDescripcion.Text = "Nombre";
             this.txtCuerpoDescripcion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -362,7 +362,7 @@
             this.txtCuerpoMarca.Multiline = true;
             this.txtCuerpoMarca.Name = "txtCuerpoMarca";
             this.txtCuerpoMarca.Size = new System.Drawing.Size(342, 34);
-            this.txtCuerpoMarca.TabIndex = 0;
+            this.txtCuerpoMarca.TabIndex = 8;
             this.txtCuerpoMarca.Text = "Nombre";
             this.txtCuerpoMarca.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -376,7 +376,7 @@
             this.txtCuerpoCategoria.Multiline = true;
             this.txtCuerpoCategoria.Name = "txtCuerpoCategoria";
             this.txtCuerpoCategoria.Size = new System.Drawing.Size(342, 34);
-            this.txtCuerpoCategoria.TabIndex = 0;
+            this.txtCuerpoCategoria.TabIndex = 10;
             this.txtCuerpoCategoria.Text = "Nombre";
             this.txtCuerpoCategoria.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -390,7 +390,7 @@
             this.txtTablaEncabezadoUrlImagen.Location = new System.Drawing.Point(3, 568);
             this.txtTablaEncabezadoUrlImagen.Name = "txtTablaEncabezadoUrlImagen";
             this.txtTablaEncabezadoUrlImagen.Size = new System.Drawing.Size(342, 18);
-            this.txtTablaEncabezadoUrlImagen.TabIndex = 0;
+            this.txtTablaEncabezadoUrlImagen.TabIndex = 11;
             this.txtTablaEncabezadoUrlImagen.Text = "Url Imagen";
             this.txtTablaEncabezadoUrlImagen.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -404,7 +404,7 @@
             this.txtTablaEncabezadoPrecio.Location = new System.Drawing.Point(3, 628);
             this.txtTablaEncabezadoPrecio.Name = "txtTablaEncabezadoPrecio";
             this.txtTablaEncabezadoPrecio.Size = new System.Drawing.Size(342, 18);
-            this.txtTablaEncabezadoPrecio.TabIndex = 0;
+            this.txtTablaEncabezadoPrecio.TabIndex = 13;
             this.txtTablaEncabezadoPrecio.Text = "Precio";
             this.txtTablaEncabezadoPrecio.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -418,7 +418,7 @@
             this.txtCuerpoUrlImagen.Multiline = true;
             this.txtCuerpoUrlImagen.Name = "txtCuerpoUrlImagen";
             this.txtCuerpoUrlImagen.Size = new System.Drawing.Size(342, 34);
-            this.txtCuerpoUrlImagen.TabIndex = 0;
+            this.txtCuerpoUrlImagen.TabIndex = 12;
             this.txtCuerpoUrlImagen.Text = "Nombre";
             this.txtCuerpoUrlImagen.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -432,7 +432,7 @@
             this.txtCuerpoPrecio.Multiline = true;
             this.txtCuerpoPrecio.Name = "txtCuerpoPrecio";
             this.txtCuerpoPrecio.Size = new System.Drawing.Size(342, 34);
-            this.txtCuerpoPrecio.TabIndex = 0;
+            this.txtCuerpoPrecio.TabIndex = 14;
             this.txtCuerpoPrecio.Text = "Nombre";
             this.txtCuerpoPrecio.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -446,7 +446,7 @@
             this.txtCuerpoNombre.Multiline = true;
             this.txtCuerpoNombre.Name = "txtCuerpoNombre";
             this.txtCuerpoNombre.Size = new System.Drawing.Size(342, 34);
-            this.txtCuerpoNombre.TabIndex = 0;
+            this.txtCuerpoNombre.TabIndex = 2;
             this.txtCuerpoNombre.Text = "Nombre";
             this.txtCuerpoNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -484,7 +484,7 @@
             this.lblID.Location = new System.Drawing.Point(332, 250);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(13, 15);
-            this.lblID.TabIndex = 9;
+            this.lblID.TabIndex = 15;
             this.lblID.Text = "a";
             this.lblID.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
@@ -497,7 +497,7 @@
             this.cboCampo.Margin = new System.Windows.Forms.Padding(4);
             this.cboCampo.Name = "cboCampo";
             this.cboCampo.Size = new System.Drawing.Size(173, 25);
-            this.cboCampo.TabIndex = 5;
+            this.cboCampo.TabIndex = 0;
             this.ttAyuda.SetToolTip(this.cboCampo, "Campo obligatorio");
             this.cboCampo.SelectedIndexChanged += new System.EventHandler(this.cboCampo_SelectedIndexChanged);
             // 
@@ -510,7 +510,7 @@
             this.cboCriterio.Margin = new System.Windows.Forms.Padding(4);
             this.cboCriterio.Name = "cboCriterio";
             this.cboCriterio.Size = new System.Drawing.Size(175, 25);
-            this.cboCriterio.TabIndex = 5;
+            this.cboCriterio.TabIndex = 1;
             this.ttAyuda.SetToolTip(this.cboCriterio, "Campo obligatorio");
             // 
             // ttEliminar
@@ -529,8 +529,8 @@
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(97, 35);
-            this.btnEliminar.TabIndex = 2;
-            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.TabIndex = 8;
+            this.btnEliminar.Text = "&Eliminar";
             this.ttEliminar.SetToolTip(this.btnEliminar, "Eliminar elemento de la base de datos");
             this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
@@ -547,8 +547,8 @@
             this.btnQuitar.Margin = new System.Windows.Forms.Padding(4);
             this.btnQuitar.Name = "btnQuitar";
             this.btnQuitar.Size = new System.Drawing.Size(97, 35);
-            this.btnQuitar.TabIndex = 2;
-            this.btnQuitar.Text = "Quitar";
+            this.btnQuitar.TabIndex = 9;
+            this.btnQuitar.Text = "&Quitar";
             this.ttEliminar.SetToolTip(this.btnQuitar, "Quitar de la lista (Se puede recuperar el archivo en caso de ser necesario)");
             this.btnQuitar.UseVisualStyleBackColor = false;
             this.btnQuitar.Click += new System.EventHandler(this.btnQuitar_Click);
