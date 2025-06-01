@@ -180,7 +180,7 @@ namespace frmTiendaPrincipal
                     }
                 }
 
-                if (txtUrlImagen.Text != null && !(txtUrlImagen.Text.ToLower().Contains("http")) && result == DialogResult.Yes)
+                if (txtUrlImagen.Text != null && !(txtUrlImagen.Text.ToLower().Contains("http")) && resultadoAgregarImg == DialogResult.Yes)
                 {
                     File.Copy(txtUrlImagen.Text, ConfigurationManager.AppSettings["Articulo-imagenes"] + archivo.SafeFileName, overwrite: true);
                 }
@@ -193,14 +193,15 @@ namespace frmTiendaPrincipal
             }  
         }
 
+        private DialogResult resultadoAgregarImg; //Agregamos un atributo de clase a modo de PARCHE ya que la vamos a utilizar para una validación dentro del condicional If de la linea 183(). Se me ocurre que lo ideal es agregar una validación por expresión regular para comprobar si es una URL http o local válida. Pero como no se expresiones regulares lo manejamos así aunque no sea óptimo. 
         private void btnAgregarImagen_Click(object sender, EventArgs e)
         {
             archivo = new OpenFileDialog();
 
             archivo.Filter = "Imágenes (*.jpg, *.png)|*.jpg;*.png";
-            DialogResult resultado = archivo.ShowDialog();
+            resultadoAgregarImg = archivo.ShowDialog();
 
-            if (resultado == DialogResult.OK)
+            if (resultadoAgregarImg == DialogResult.OK)
             {
                 txtUrlImagen.Text = archivo.FileName;
             }
