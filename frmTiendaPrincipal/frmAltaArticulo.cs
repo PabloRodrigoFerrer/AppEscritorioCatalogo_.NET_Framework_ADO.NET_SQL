@@ -151,6 +151,7 @@ namespace frmTiendaPrincipal
                     Articulo = new Articulo();
 
                 DialogResult result = DialogResult.No;
+                
 
                 Articulo.Codigo = txtCodigo.Text;
                 Articulo.Nombre = txtNombre.Text;
@@ -180,9 +181,10 @@ namespace frmTiendaPrincipal
                     }
                 }
 
-                if (txtUrlImagen.Text != null && !(txtUrlImagen.Text.ToLower().Contains("http")) && resultadoAgregarImg == DialogResult.Yes)
+                if (txtUrlImagen.Text != null && !(txtUrlImagen.Text.ToLower().Contains("http")) && resultadoAgregarImg == DialogResult.OK)
                 {
                     File.Copy(txtUrlImagen.Text, ConfigurationManager.AppSettings["Articulo-imagenes"] + archivo.SafeFileName, overwrite: true);
+                    resultadoAgregarImg = DialogResult.No;
                 }
                 
                 this.Close();
