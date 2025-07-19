@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
+using frmTiendaPrincipal;
 
 namespace Configuration
 {
@@ -14,6 +16,6 @@ namespace Configuration
 
         public static IMarcaRepository NegocioMarca => new NegocioMarca(Injection.AccesoDatos);
 
-       
+       public static Form CrearFrmAlta => new frmAltaArticulo(Injection.NegocioCategoria, Injection.NegocioMarca);
     }
 }

@@ -26,11 +26,11 @@ namespace frmTiendaPrincipal
         private readonly ICategoriaRepository _negocioCategoria;
         private readonly IMarcaRepository _negocioMarca;
 
-        public frmAltaArticulo()
+        public frmAltaArticulo(ICategoriaRepository negocioCategoria, IMarcaRepository negocioMarca)
         {
             InitializeComponent();
-            _negocioCategoria = Injection.NegocioCategoria;
-            _negocioMarca = Injection.NegocioMarca;
+            _negocioCategoria = negocioCategoria;
+            _negocioMarca = negocioMarca;
         }
 
         public frmAltaArticulo(Articulo articulo) 

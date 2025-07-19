@@ -102,7 +102,7 @@ namespace frmTiendaPrincipal
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            frmAltaArticulo AltaVentana = new frmAltaArticulo();
+            var AltaVentana = Injection.CrearFrmAlta;
             AltaVentana.ShowDialog();
             cargar();
         }
