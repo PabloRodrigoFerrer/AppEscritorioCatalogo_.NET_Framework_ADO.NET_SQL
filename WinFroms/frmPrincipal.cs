@@ -18,10 +18,14 @@ namespace frmTiendaPrincipal
     public partial class frmPrincipal : Form
     {
         List<Articulo> listaArticulos;
-        
+        //private readonly AccesoDatos _accesoDatos;
+        private readonly NegocioCategoria _negocioCategoria;
+
         public frmPrincipal()
         {
             InitializeComponent();
+           var _accesoDatos = new AccesoDatos();
+            _negocioCategoria = new NegocioCategoria(_accesoDatos);
         }
 
         private void frmPrincipal_Load(object sender, EventArgs e)
@@ -224,8 +228,8 @@ namespace frmTiendaPrincipal
                 }
                 else
                 {
-                    NegocioCategoria negocioCategoria = new NegocioCategoria();
-                    cboCriterio.DataSource = negocioCategoria.listar();
+                    
+                    cboCriterio.DataSource = _negocioCategoria.listar();
                 }
 
                 txtFiltroAvanzado.Enabled = false;

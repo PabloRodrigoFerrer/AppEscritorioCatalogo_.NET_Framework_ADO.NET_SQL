@@ -20,10 +20,12 @@ namespace frmTiendaPrincipal
     {
         Articulo Articulo = null;
         OpenFileDialog archivo = null;
+        private readonly AccesoDatos _accesoDatos;
 
         public frmAltaArticulo()
         {
             InitializeComponent();
+            _accesoDatos = new AccesoDatos();
         }
 
         public frmAltaArticulo(Articulo articulo) 
@@ -31,12 +33,13 @@ namespace frmTiendaPrincipal
             InitializeComponent();
             this.Articulo = articulo;
             Text = "Modificar artículo";
+            _accesoDatos = new AccesoDatos();
         }
 
         private void frmAltaArticulo_Load(object sender, EventArgs e)
         {
             NegocioMarca negocioMarca = new NegocioMarca();
-            NegocioCategoria negocioCategoria = new NegocioCategoria();
+            NegocioCategoria negocioCategoria = new NegocioCategoria(_accesoDatos);
 
             try
             {   

@@ -8,27 +8,32 @@ using Dominio;
 namespace Negocio
 {
     public class NegocioCategoria
-    {   
-        public List<Categoria> listar() 
-        {        
-            AccesoDatos datos = new AccesoDatos();
-            List<Categoria> listaCategorias = new List<Categoria>();
+    {
+        private readonly AccesoDatos _accesoDatos;
+
+        public NegocioCategoria(AccesoDatos datos) {
+
+            _accesoDatos = datos;
+        }
+
+        public IEnumerable<Categoria> listar() 
+        {         
+            var listaCategorias = new List<Categoria>();
             
             try
             {
-                datos.setearConsulta("SELECT Id, Descripcion FROM CATEGORIAS");
-                datos.ejecutarLector();
+                _accesoDatos.setearConsulta("SELECT Id, Descripcion FROM CATEGORIAS");
+                _accesoDatos.ejecutarLector();
 
-                while (datos.Lector.Read()) 
+                while (_accesoDatos.Lector.Read()) 
                 {
-                    Categoria aux = new Categoria();
-
-                    aux.Id = (int)datos.Lector["Id"];
-                    aux.Descripcion = (string)datos.Lector["Descripcion"];
-
-                    listaCategorias.Add(aux);
+                    listaCategorias.Add(new Categoria
+                    {
+                        Id = (int)_accesoDatos.Lector["Id"],
+                        Descripcion = (string)_accesoDatos.Lector["Descripcion"]
+                    });
                 }
-
+                
                 return listaCategorias;
             }
             catch (Exception ex)
@@ -37,7 +42,7 @@ namespace Negocio
             }
             finally 
             {
-                datos.cerrarConexion();            
+                _accesoDatos.cerrarConexion();            
             }
         }
     }

@@ -10,12 +10,12 @@ namespace Negocio
 {
     public class NegocioMarca
     {
-        List<Marca> listaMarcas;
+       
 
         public List<Marca> listar() 
         {
             AccesoDatos datos = new AccesoDatos();
-            listaMarcas = new List<Marca>();
+            var listaMarcas = new List<Marca>();
             try
             {
                 datos.setearConsulta("SELECT Id, Descripcion FROM MARCAS");
