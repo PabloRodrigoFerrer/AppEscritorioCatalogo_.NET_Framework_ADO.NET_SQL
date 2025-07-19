@@ -8,25 +8,30 @@ using Dominio;
 
 namespace Negocio
 {
-    public class NegocioMarca
+    public class NegocioMarca : IMarcaRepository
     {
-       
 
-        public List<Marca> listar() 
+        private readonly AccesoDatos _accesoDatos;
+
+        public NegocioMarca(AccesoDatos accesoDatos) 
         {
-            AccesoDatos datos = new AccesoDatos();
+            _accesoDatos = accesoDatos;
+        }
+
+        public IEnumerable<Marca> Listar() 
+        {
+            
             var listaMarcas = new List<Marca>();
             try
             {
-                datos.setearConsulta("SELECT Id, Descripcion FROM MARCAS");
-                datos.ejecutarLector();
+                _accesoDatos.setearConsulta("SELECT Id, Descripcion FROM MARCAS");
+                _accesoDatos.ejecutarLector();
 
-                while (datos.Lector.Read()) 
+                while (_accesoDatos.Lector.Read()) 
                 {
                     Marca aux = new Marca();
-
-                    aux.Id = (int)datos.Lector["Id"];
-                    aux.Descripcion = (string)datos.Lector["Descripcion"];                              
+                    aux.Id = (int)_accesoDatos.Lector["Id"];
+                    aux.Descripcion = (string)_accesoDatos.Lector["Descripcion"];                              
                     
                     listaMarcas.Add(aux);
                 }
@@ -39,7 +44,7 @@ namespace Negocio
             }
             finally 
             {
-                datos.cerrarConexion();
+                _accesoDatos.cerrarConexion();
             }
         }
     }

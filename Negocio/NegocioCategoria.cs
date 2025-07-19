@@ -5,9 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 using Dominio;
 
+
 namespace Negocio
 {
-    public class NegocioCategoria
+    public class NegocioCategoria : ICategoriaRepository
     {
         private readonly AccesoDatos _accesoDatos;
 
@@ -16,7 +17,7 @@ namespace Negocio
             _accesoDatos = datos;
         }
 
-        public IEnumerable<Categoria> listar() 
+        public IEnumerable<Categoria> Listar() 
         {         
             var listaCategorias = new List<Categoria>();
             
@@ -42,7 +43,7 @@ namespace Negocio
             }
             finally 
             {
-                _accesoDatos.cerrarConexion();            
+                _accesoDatos.cerrarConexion();   
             }
         }
     }

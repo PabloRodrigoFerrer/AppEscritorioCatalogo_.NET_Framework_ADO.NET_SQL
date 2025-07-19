@@ -13,6 +13,7 @@ using System.Windows.Forms.VisualStyles;
 using System.Configuration;
 using Dominio;
 using Negocio;
+using Configuration;
 
 namespace frmTiendaPrincipal
 {
@@ -20,12 +21,16 @@ namespace frmTiendaPrincipal
     {
         Articulo Articulo = null;
         OpenFileDialog archivo = null;
-        private readonly AccesoDatos _accesoDatos;
+
+        
+        private readonly ICategoriaRepository _negocioCategoria;
+        private readonly IMarcaRepository _negocioMarca;
 
         public frmAltaArticulo()
         {
             InitializeComponent();
-            _accesoDatos = new AccesoDatos();
+            _negocioCategoria = Injection.NegocioCategoria;
+            _negocioMarca = Injection.NegocioMarca;
         }
 
         public frmAltaArticulo(Articulo articulo) 
@@ -33,20 +38,18 @@ namespace frmTiendaPrincipal
             InitializeComponent();
             this.Articulo = articulo;
             Text = "Modificar artículo";
-            _accesoDatos = new AccesoDatos();
+            _negocioCategoria = Injection.NegocioCategoria;
+            _negocioMarca = Injection.NegocioMarca;
         }
 
         private void frmAltaArticulo_Load(object sender, EventArgs e)
         {
-            NegocioMarca negocioMarca = new NegocioMarca();
-            NegocioCategoria negocioCategoria = new NegocioCategoria(_accesoDatos);
-
             try
             {   
-                cboMarca.DataSource = negocioMarca.listar();
+                cboMarca.DataSource = _negocioMarca.Listar();
                 cboMarca.ValueMember = "Id";
                 cboMarca.DisplayMember = "Descripcion";
-                cboCategoria.DataSource = negocioCategoria.listar();
+                cboCategoria.DataSource = _negocioCategoria.Listar();
                 cboCategoria.ValueMember = "Id";
                 cboCategoria.DisplayMember = "Descripcion";
 

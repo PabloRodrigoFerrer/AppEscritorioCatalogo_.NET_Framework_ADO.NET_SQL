@@ -9,6 +9,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Configuration;
 using Dominio;
 using Microsoft.SqlServer.Server;
 using Negocio;
@@ -18,14 +19,15 @@ namespace frmTiendaPrincipal
     public partial class frmPrincipal : Form
     {
         List<Articulo> listaArticulos;
-        //private readonly AccesoDatos _accesoDatos;
-        private readonly NegocioCategoria _negocioCategoria;
+        
+        private readonly ICategoriaRepository _negocioCategoria;
+        private readonly IMarcaRepository _negocioMarca;
 
         public frmPrincipal()
         {
             InitializeComponent();
-           var _accesoDatos = new AccesoDatos();
-            _negocioCategoria = new NegocioCategoria(_accesoDatos);
+            _negocioCategoria = Injection.NegocioCategoria;
+            _negocioMarca = Injection.NegocioMarca; 
         }
 
         private void frmPrincipal_Load(object sender, EventArgs e)
@@ -223,13 +225,13 @@ namespace frmTiendaPrincipal
             {
                 if (cboCampo.Text == "Marca")
                 {
-                    NegocioMarca negocioMarca = new NegocioMarca();
-                    cboCriterio.DataSource = negocioMarca.listar();
+
+                    cboCriterio.DataSource = _negocioMarca.Listar();
                 }
                 else
                 {
                     
-                    cboCriterio.DataSource = _negocioCategoria.listar();
+                    cboCriterio.DataSource = _negocioCategoria.Listar();
                 }
 
                 txtFiltroAvanzado.Enabled = false;
